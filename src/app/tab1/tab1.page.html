@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      PREFACE TO TRANSLATION
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,124 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">TAB 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <style>
+    textarea {
+      resize: none;
+    } 
+  body {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/St_George's_Day_2010_-_14.jpg/1200px-St_George's_Day_2010_-_14.jpg");
+  overflow: auto!important;
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  } 
+div {
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  transition: width 4s;
+}
+
+div:hover {
+  width: 300px;
+}
+
+
+  
+    </style>
+    <h1>
+      <div>
+      WELCOME TO THE TRANSLATOR APP
+      </div>
+
+    </h1>
+   
+
+<textarea id="w3review" name="w3review" rows="4" cols="1000">
+  The way we communicate with others and 
+  with ourselves ultimately 
+  determines the quality of our lives.
+          ~Tony Robbins
+  
+  </textarea>
+  <body>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>English and French trade</ion-label>
+      <ion-button (click) ="openPopover('This is a great evening.')" fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      C'est un grand soir.
+    </ion-card-content>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>English and Hindi love.</ion-label>
+      <ion-button (click) ="openPopover('I love India.')"fill="outline" slot="end">View</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      मैं भारत से प्यार करता हूं ।
+    </ion-card-content>
+    <br>
+    <br><img src="https://th.bing.com/th/id/OIP.D3GMN1sGeg7L6WCZMWivDQHaFj?w=211&h=180&c=7&o=5&pid=1.7" alt="hey" width="5000" height="10">
+    <br>
+     <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>Gujarati and Marathi joy.</ion-label>
+      <ion-button (click) ="openPopover('मला जलेबी आवडतात')" fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      મને જલેબી ગમે છે
+    </ion-card-content>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>Odiya and Nepali romance.</ion-label>
+      <ion-button (click) ="openPopover('ओडिशा राम्रो ठाउँ हो')" fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      ଓଡ଼ିଶା ଏକ ଭଲ ସ୍ଥାନ |
+    </ion-card-content>
+    
+  </ion-card>
+  
+  
+  <ion-content>
+    <!-- fab placed to the top end -->
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+          <!-- fab placed to the bottom end -->
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="arrow-forward-circle"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+    </ion-content>
+    </body>
+    
+
+    
+
+  
+
+
+
+  
+  
+
+
+  
+  
+
+  
 </ion-content>

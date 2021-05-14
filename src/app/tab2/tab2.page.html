@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      TRANSLATION
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,129 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <style>
+      body{
+    background-color:cornsilk;
+      }
+      #right{
+        text-align:right;
+      }
+      #bottom{
+        text-align:bottom;
+      }
+      .dropbtn {
+  background-color: #010701;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160pw;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #aa590e;
+}
+
+      
+
+  </style>
+  <body >
+    <ion-item>
+      <ion-label>Input language</ion-label>
+      <ion-select [(ngModel)]="source" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="en">English</ion-select-option>
+        <ion-select-option value="fr">French</ion-select-option>
+        <ion-select-option value="de">German</ion-select-option>
+        <ion-select-option value="ja">Japanese</ion-select-option>
+        <ion-select-option value="hi">Hindi</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="fixed" >Input Text</ion-label>
+      <ion-input [(ngModel)]="inputSen"></ion-input>
+    </ion-item>
+    <div id="right">
+      <ion-chip>
+        <ion-icon name="volume-mute-outline"></ion-icon>
+        <ion-label>No audio.</ion-label>
+      </ion-chip>
+  
+    </div>
+    <br><br>
+    <button class="ion-activatable ripple-pare " (click)="translate()">
+      Translate
+      <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+    </button>
+    <div id="right">
+    <img src="https://image.freepik.com/free-vector/illustration-with-young-people-talking_52683-29824.jpg" alt="hey" > 
+    </div>
+    <br><br>
+    <ion-item>
+      <ion-label>Output language</ion-label>
+      <ion-select [(ngModel)]="target" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="hi">Hindi</ion-select-option>
+        <ion-select-option value="de">German</ion-select-option>
+        <ion-select-option value="en">English</ion-select-option>
+        <ion-select-option value="es">Spanish</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="fixed">Translated Text</ion-label>
+      <ion-input  [(ngModel)]="translatedText"></ion-input>
+    </ion-item>
+
+     <br>
+     <br>
+     <ion-button (click) ="presentAlert()" fill="solid" color="dark" slot="end">Case</ion-button>
+  
+    <div id="bottom">
+     <ion-chip>
+      <ion-icon name="logo-apple" color="dark"></ion-icon>
+      <ion-label>Supported by Apple</ion-label>
+    </ion-chip>
+   
+    <ion-chip>
+      <ion-icon name="logo-github" color="light"></ion-icon>
+      <ion-label>Hosted on Github. </ion-label>
+    </ion-chip>
+
+    </div>
+        
+  </body>
 </ion-content>
+
